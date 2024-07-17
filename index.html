@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>domino6658's Website</title>
-    <link rel="icon" type="image/ico" href="images/dominofavicon.ico">
+  <title>domino6658's Website</title>
+  <link rel="icon" type="image/ico" href="images/dominofavicon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <title>Page Title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial;
-  
-  /* background-image: url('https://c.tenor.com/aBEvbcHPRGYAAAAd/tenor.gif');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; */
-}
-</style>
+
 </head>
 <body>
 
-<h1 style="background-color:rgb(42, 62, 96);color:rgb(255, 255, 255);padding:10px">domino6658's Website</h1>
-<p style="background-color:rgb(255, 255, 255);">A website created by domino6658.</p>
-<p style="background-color:rgb(255, 255, 255);">Not really sure what I'm gonna use this for but we'll find out.</p>
+<h1>domino6658's Website</h1>
+<p>A website created by domino6658.</p>
+<p>Not really sure what I'm gonna use this for but we'll find out.</p>
 <img src="https://c.tenor.com/aBEvbcHPRGYAAAAd/tenor.gif">
+<p></p>
+
+
+<button class="button" id="clickButton">Counter: <span id="count">0</span></button>
+<!-- <button id="resetButton">Reset Count</button> -->
+  <script>
+    // Function to handle button click
+    function handleClick() {
+      // Get the count span element
+      var countSpan = document.getElementById('count');
+      // Get the current count
+      var count = parseInt(countSpan.innerText);
+      // Increment the count
+      count++;
+      // Update the count text
+      countSpan.innerText = count;
+      // Update localStorage with the new count
+      localStorage.setItem('clickCount', count);
+    }
+
+    // Function to reset the count
+    function resetCount() {
+            localStorage.removeItem('clickCount'); // Remove the stored count
+            document.getElementById('count').innerText = '0'; // Update UI to show 0
+        }
+
+    // Function to initialize count from localStorage
+    function initializeCount() {
+      var countSpan = document.getElementById('count');
+      var count = parseInt(localStorage.getItem('clickCount')) || 0;
+      countSpan.innerText = count;
+    }
+
+    // Call initializeCount on page load
+    initializeCount();
+
+    // Get the button element
+    var button = document.getElementById('clickButton');
+    var resetBtn = document.getElementById('resetButton');
+    // Add a click event listener to the button
+    button.addEventListener('click', handleClick);
+    resetBtn.addEventListener('click', resetCount);
+    </script>
+  
 
 </body>
-</html>
+</html> 
