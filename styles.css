@@ -1,34 +1,58 @@
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
 body {
-    font-family: Arial;
+    font-family: "Roboto";
     
-    /* background-image: url('https://c.tenor.com/aBEvbcHPRGYAAAAd/tenor.gif');
+    background-color: rgb(42, 62, 95);
+    /* background-image: url("https://files.catbox.moe/x504w5.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; */
 }
 h1 {
-    background-color:rgb(42, 62, 96);
+    background-color:rgb(30, 45, 70);
     color:rgb(255, 255, 255);
-    padding:10px
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left: 50px;
+    width: 100%;
+    font-size: 40px
 }
+p {
+    color:white;
+    margin-left: 50px;
+    font-size: 25px
+}
+
+button {
+    margin-left: 50px;
+    font-size: 30px
+}
+
 img {
-    border: 4px solid rgb(42, 62, 96);padding: 6px;
+    border: 4px solid rgb(30, 45, 70);padding: 6px;
+    margin-left: 50px;
 }
 .button {
-    background-color: rgb(42, 62, 96); /* Green */
-    border: 3px solid rgb(42, 62, 96); /* Green */
+    background-color: rgb(30, 45, 70); /* Green */
+    border: 4px solid rgb(30, 45, 70); /* Green */
     color: white;
     padding: 8px 8px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 25px;
     border-radius: 8px;
     transition-duration: 0.05s;
   }
 .button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(42, 62, 96);
+    background-color: rgba(225, 225, 225, 0.1);
+    /* color: rgb(30, 45, 70); */
     padding: 8px 8px;
     text-align: center;
     text-decoration: none;
@@ -36,20 +60,28 @@ img {
     transition-duration: 0.05s;
   }
 .button:active {
-    background-color: rgb(219, 232, 255);
-    color: rgb(31, 46, 71);
+    background-color: rgba(38, 59, 84, 0.8);
+    /* color: rgb(31, 46, 71); */
     padding: 8px 8px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     transition-duration: 0.05s;
 }
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
+
 #clickCount {
     font-size: 18px;
     margin-top: 20px;
 }
+
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
